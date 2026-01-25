@@ -98,7 +98,7 @@ export default function Hero() {
 
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-300"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-400"
         >
           I'm a{' '}
           <span className="relative inline-block min-w-[200px] md:min-w-[300px] lg:min-w-[400px] h-[1.2em]" style={{ paddingTop: '20px' }}>
@@ -130,7 +130,7 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20"
         >
           <motion.a
             href="#contact"
@@ -160,7 +160,7 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
         >
           <motion.a
             href="#about"
