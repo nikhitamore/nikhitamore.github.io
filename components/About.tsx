@@ -32,10 +32,38 @@ export default function About() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Photo Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative group flex justify-center"
+          >
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition duration-300" />
+              
+              {/* Photo container */}
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/30 group-hover:border-purple-500/50 transition-all duration-300">
+                <motion.img
+                  src="/dev_profile.jpg"
+                  alt="Nikhita More"
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+              
+              {/* Decorative ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-purple-500/20 animate-pulse" />
+            </div>
+          </motion.div>
+
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="relative group"
           >
             {/* Glow effect */}
@@ -56,7 +84,7 @@ export default function About() {
               </p>
               <motion.a
                 href="/Nikhita_More.pdf"
-                download
+                download="Nikhita_More.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/75 transition-shadow relative overflow-hidden group"
@@ -72,13 +100,16 @@ export default function About() {
               </motion.a>
             </div>
           </motion.div>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-2 gap-4"
-          >
+        {/* Skills Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { title: 'Full Stack Development', desc: 'React, Next.js, TypeScript, Python, FastAPI', icon: '⚡' },
               { title: 'Cloud & DevOps', desc: 'OpenShift, Docker, CI/CD pipelines, GitLab', icon: '☁️' },
@@ -89,7 +120,7 @@ export default function About() {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="relative group bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
               >
@@ -102,8 +133,8 @@ export default function About() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
