@@ -6,9 +6,9 @@ import {
   SiTypescript, SiJavascript, SiPython, SiHtml5, SiCss3, SiMicrosoftsqlserver,
   SiReact, SiNextdotjs, SiDocker, SiGitlab, SiMongodb, SiMysql, SiOracle,
   SiOpenai, SiFigma, SiGithub, SiGitlab as SiGitlabIcon, SiLinux, SiBootstrap,
-  SiServicenow, SiKubernetes
+  SiKubernetes
 } from 'react-icons/si'
-import { FaBrain, FaDatabase, FaRobot, FaCloud } from 'react-icons/fa'
+import { FaBrain, FaDatabase, FaRobot, FaCloud, FaCogs } from 'react-icons/fa'
 
 // Skill logo mapping
 const skillLogos: { [key: string]: React.ComponentType<any> } = {
@@ -30,7 +30,7 @@ const skillLogos: { [key: string]: React.ComponentType<any> } = {
   'Docker': SiDocker,
   'GitLab CI/CD': SiGitlab,
   'OpenShift': SiKubernetes,
-  'ServiceNow': SiServicenow,
+  'ServiceNow': FaCogs,
   'Backstage': SiReact,
   'Figma': SiFigma,
   'Websso': FaCloud,
