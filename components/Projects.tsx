@@ -20,48 +20,42 @@ const personalProjects: Project[] = [
     description: 'Make AI-powered brochure generator that scrapes and navigates company websites intelligently.',
     technologies: ['AI', 'Web Scraping', 'Python', 'LLM'],
     githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/brochure-generator.png',
   },
   {
     title: 'Multi-modal Customer Support Agent',
     description: 'Build Multi-modal customer support agent for an airline with UI and function-calling.',
     technologies: ['AI', 'Multi-modal', 'Function Calling', 'Python', 'React'],
     githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/customer-suppor.jpg',
   },
   {
     title: 'Meeting Minutes & Action Items Generator',
     description: 'Develop Tool that creates meeting minutes and action items from audio using both open- and closed-source models.',
     technologies: ['AI', 'Audio Processing', 'LLM', 'Python', 'Speech-to-Text'],
     githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/meeting-minutes.png',
   },
   {
     title: 'Python to C++ Code Optimizer',
     description: 'Make AI that converts Python code to optimized C++, boosting performance by 60,000x!',
     technologies: ['AI', 'Code Generation', 'Python', 'C++', 'LLM'],
     githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/code-optimizer.png',
   },
   {
     title: 'AI Knowledge Worker with RAG',
     description: 'Build AI knowledge-worker using RAG to become an expert on all company-related matters.',
     technologies: ['RAG', 'AI', 'LLM', 'Python', 'Vector Database'],
     githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/rag-knowledg.png',
   },
   {
-    title: 'Product Price Prediction (Frontier Models)',
-    description: 'Capstone Part A – Predict product prices from short descriptions using Frontier models.',
-    technologies: ['Machine Learning', 'LLM', 'Frontier Models', 'Python'],
+    title: 'AI-Powered Price Prediction & Deal Spotter (Capstone Project)',
+    description: 'A comprehensive capstone project spanning three phases: Part A - Predict product prices from short descriptions using Frontier models; Part B - Fine-tuned open-source model to compete with Frontier models in price prediction; Part C - Autonomous multi-agent system collaborating to spot deals and notify users of special bargains.',
+    technologies: ['Machine Learning', 'LLM', 'Frontier Models', 'Fine-tuning', 'Multi-Agent Systems', 'AI', 'Python', 'Automation'],
     githubUrl: 'https://github.com/nikhitamore',
-  },
-  {
-    title: 'Fine-tuned Price Prediction Model',
-    description: 'Capstone Part B – Execute Fine-tuned open-source model to compete with Frontier in price prediction.',
-    technologies: ['Fine-tuning', 'Machine Learning', 'Open Source LLM', 'Python'],
-    githubUrl: 'https://github.com/nikhitamore',
-  },
-  {
-    title: 'Autonomous Multi-Agent Deal Spotter',
-    description: 'Capstone Part C – Build Autonomous multi agent system collaborating with models to spot deals and notify you of special bargains.',
-    technologies: ['Multi-Agent Systems', 'AI', 'LLM', 'Python', 'Automation'],
-    githubUrl: 'https://github.com/nikhitamore',
+    image: '/projects/price-prediction.png',
   },
 ]
 
@@ -148,11 +142,19 @@ export default function Projects() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
               
               <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full flex flex-col">
-                {/* Project image placeholder */}
+                {/* Project image */}
                 <div className="relative h-48 bg-gradient-to-br from-purple-100/50 dark:from-purple-900/50 to-pink-100/50 dark:to-pink-900/50 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl opacity-20">🚀</div>
-                  </div>
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-6xl opacity-20">🚀</div>
+                    </div>
+                  )}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                     initial={false}
@@ -164,7 +166,7 @@ export default function Projects() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-700 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+                    <p className="text-gray-700 dark:text-gray-400 text-sm mb-4 line-clamp-4">
                       {project.description}
                     </p>
                   </div>
