@@ -98,7 +98,7 @@ export default function Skills() {
   return (
     <section id="skills" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-blue-900/10 dark:via-blue-900/10 via-blue-100/10 to-white dark:to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -109,11 +109,11 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Skills & Technologies
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto" />
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto" />
         </motion.div>
 
         {/* First Row: Programming & Frameworks */}
@@ -127,9 +127,9 @@ export default function Skills() {
               className="relative group"
             >
               {/* Subtle glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition duration-300" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition duration-300" />
               
-              <div className="relative bg-gray-50/50 dark:bg-gray-900/50 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 hover:border-blue-700/30 dark:hover:border-blue-700/30 transition-all duration-300 h-full backdrop-blur-sm">
+              <div className="relative bg-gray-50/50 dark:bg-gray-900/50 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 hover:border-purple-500/30 dark:hover:border-purple-500/30 transition-all duration-300 h-full backdrop-blur-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-2xl opacity-70">{category.icon}</span>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
@@ -147,7 +147,7 @@ export default function Skills() {
                         animate={inView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.3, delay: categoryIndex * 0.2 + skillIndex * 0.05 }}
                         whileHover={{ scale: 1.05, y: -2 }}
-                        className="px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-600/40 dark:hover:border-blue-700/40 transition-all cursor-default backdrop-blur-sm flex items-center gap-2"
+                        className="px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:border-purple-400/40 dark:hover:border-purple-500/40 transition-all cursor-default backdrop-blur-sm flex items-center gap-2"
                       >
                         {IconComponent && (
                           <span className="text-gray-600 dark:text-gray-400">
@@ -177,9 +177,9 @@ export default function Skills() {
               className="relative group"
             >
               {/* Subtle glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition duration-300" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition duration-300" />
               
-              <div className="relative bg-gray-50/50 dark:bg-gray-900/50 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 hover:border-blue-700/30 dark:hover:border-blue-700/30 transition-all duration-300 h-full backdrop-blur-sm">
+              <div className="relative bg-gray-50/50 dark:bg-gray-900/50 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 hover:border-purple-500/30 dark:hover:border-purple-500/30 transition-all duration-300 h-full backdrop-blur-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-2xl opacity-70">{category.icon}</span>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
@@ -197,7 +197,7 @@ export default function Skills() {
                         animate={inView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.3, delay: (categoryIndex + 2) * 0.2 + skillIndex * 0.05 }}
                         whileHover={{ scale: 1.05, y: -2 }}
-                        className="px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-600/40 dark:hover:border-blue-700/40 transition-all cursor-default backdrop-blur-sm flex items-center gap-2"
+                        className="px-3 py-1.5 bg-white/60 dark:bg-gray-800/60 rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:border-purple-400/40 dark:hover:border-purple-500/40 transition-all cursor-default backdrop-blur-sm flex items-center gap-2"
                       >
                         {IconComponent && (
                           <span className="text-gray-600 dark:text-gray-400">
