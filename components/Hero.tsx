@@ -47,9 +47,9 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-pink-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 dark:from-purple-900/20 from-purple-100/20 via-white dark:via-black to-pink-900/20 dark:to-pink-900/20 to-pink-100/20" />
       
       {/* Multiple animated orbs */}
       <motion.div
@@ -82,7 +82,7 @@ export default function Hero() {
           variants={itemVariants}
           className="mb-4"
         >
-          <span className="text-purple-400 text-sm md:text-base font-mono">
+          <span className="text-purple-400 dark:text-purple-400 text-purple-600 text-sm md:text-base font-mono">
             Hi, my name is
           </span>
         </motion.div>
@@ -121,7 +121,7 @@ export default function Hero() {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12"
         >
           Senior Software Engineer & Full Stack Developer based in Pune, India.
           <br />
@@ -166,7 +166,7 @@ export default function Hero() {
             href="#about"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
             <FiArrowDown size={24} />
           </motion.a>

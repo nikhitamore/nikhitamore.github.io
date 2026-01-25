@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen bg-black text-white">
+      <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
         <Navigation />
         <Hero />
         <About />

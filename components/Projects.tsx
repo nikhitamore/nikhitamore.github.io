@@ -72,9 +72,9 @@ export default function Projects() {
   })
 
   return (
-    <section id="projects" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="projects" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -90,7 +90,7 @@ export default function Projects() {
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A collection of projects I've worked on, showcasing my skills and experience
           </p>
         </motion.div>
@@ -107,24 +107,24 @@ export default function Projects() {
               {/* Glow effect on hover */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
               
-              <div className="relative bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full flex flex-col">
+              <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full flex flex-col">
                 {/* Project image placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-purple-100/50 dark:from-purple-900/50 to-pink-100/50 dark:to-pink-900/50 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-6xl opacity-20">🚀</div>
                   </div>
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                     initial={false}
                   />
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                    <p className="text-gray-700 dark:text-gray-400 text-sm mb-4 line-clamp-3">
                       {project.description}
                     </p>
                   </div>
@@ -148,7 +148,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-white transition-colors"
                       >
                         <FiGithub size={20} />
                         <span className="text-sm">Code</span>
@@ -161,7 +161,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-white transition-colors"
                       >
                         <FiExternalLink size={20} />
                         <span className="text-sm">Live</span>

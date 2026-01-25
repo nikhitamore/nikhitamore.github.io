@@ -11,9 +11,9 @@ export default function About() {
   })
 
   return (
-    <section id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -69,16 +69,16 @@ export default function About() {
             {/* Glow effect */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
             
-            <div className="relative bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-8 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                 Senior Software Engineer
               </h3>
-              <p className="text-gray-400 mb-4 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-400 mb-4 leading-relaxed">
                 Senior Software Engineer with 5+ years of experience building scalable web applications and innovative solutions. 
                 Currently working at Red Hat India, where I've engineered platforms enabling 15,000+ deployments and built AI-powered 
                 documentation systems. Passionate about full-stack development, performance optimization, and creating impactful solutions.
               </p>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-400 mb-6 leading-relaxed">
                 I specialize in React, Next.js, TypeScript, Python, and cloud technologies. I enjoy solving complex problems, 
                 mentoring teams, and delivering high-quality software that makes a difference.
               </p>
@@ -122,14 +122,14 @@ export default function About() {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="relative group bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
+                className="relative group bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
               >
                 {/* Glow effect on hover */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-10 blur transition duration-300" />
                 <div className="relative">
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h4 className="text-lg font-semibold mb-2 text-purple-400">{item.title}</h4>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

@@ -52,9 +52,9 @@ export default function Experience() {
   })
 
   return (
-    <section id="experience" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="experience" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -105,17 +105,17 @@ export default function Experience() {
                       {/* Glow effect */}
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
                       
-                      <div className="relative bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+                      <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
                         <div className="flex items-start justify-between mb-4">
                           <div>
-                            <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
-                            <div className="flex items-center gap-4 text-sm text-gray-400 mb-2">
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.title}</h3>
+                            <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-2">
                               <span className="flex items-center gap-1">
                                 <FiBriefcase className="text-purple-400" />
                                 {exp.company}
                               </span>
                             </div>
-                            <div className="flex items-center gap-4 text-sm text-gray-500">
+                            <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-500">
                               <span className="flex items-center gap-1">
                                 <FiMapPin />
                                 {exp.location}
@@ -130,7 +130,7 @@ export default function Experience() {
 
                         <ul className="space-y-2 mb-4">
                           {exp.description.map((item, i) => (
-                            <li key={i} className="text-gray-400 text-sm flex items-start gap-2">
+                            <li key={i} className="text-gray-700 dark:text-gray-400 text-sm flex items-start gap-2">
                               <span className="text-purple-400 mt-1">▹</span>
                               {item}
                             </li>

@@ -39,9 +39,9 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="contact" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-pink-900/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -57,7 +57,7 @@ export default function Contact() {
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
         </motion.div>
@@ -71,8 +71,8 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Let's Connect</h3>
-              <p className="text-gray-400 mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Let's Connect</h3>
+              <p className="text-gray-700 dark:text-gray-400 mb-8">
                 Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
               </p>
             </div>
@@ -86,8 +86,8 @@ export default function Contact() {
                   <FiMail className="text-purple-400" size={24} />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-sm">Email</p>
-                  <a href="mailto:nikhitamore1@gmail.com" className="text-white hover:text-purple-400 transition-colors">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Email</p>
+                  <a href="mailto:nikhitamore1@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                     nikhitamore1@gmail.com
                   </a>
                 </div>
@@ -101,15 +101,15 @@ export default function Contact() {
                   <FiMapPin className="text-purple-400" size={24} />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white">Pune, India</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Location</p>
+                  <p className="text-gray-900 dark:text-white">Pune, India</p>
                 </div>
               </motion.div>
             </div>
 
             {/* Social Links */}
             <div className="pt-8">
-              <p className="text-gray-400 mb-4">Follow me on</p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">Follow me on</p>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -119,9 +119,9 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-gray-900 rounded-lg border border-gray-800 hover:border-purple-500/50 transition-all"
+                    className="p-3 bg-gray-100 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all"
                   >
-                    <social.icon className="text-gray-400 hover:text-purple-400 transition-colors" size={24} />
+                    <social.icon className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors" size={24} />
                   </motion.a>
                 ))}
               </div>
@@ -138,10 +138,10 @@ export default function Contact() {
             {/* Glow effect */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
             
-            <div className="relative bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-8 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
                   </label>
                   <input
@@ -151,13 +151,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white transition-all"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-gray-900 dark:text-white transition-all"
                     placeholder="Your Name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Email
                   </label>
                   <input
@@ -167,13 +167,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white transition-all"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-gray-900 dark:text-white transition-all"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
@@ -183,7 +183,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-gray-900 dark:text-white transition-all resize-none"
                     placeholder="Your Message"
                   />
                 </div>

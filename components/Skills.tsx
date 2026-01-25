@@ -55,9 +55,9 @@ export default function Skills() {
   })
 
   return (
-    <section id="skills" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="skills" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-pink-900/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -87,7 +87,7 @@ export default function Skills() {
               {/* Glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
               
-              <div className="relative bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full">
+              <div className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full">
                 <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   {category.category}
                 </h3>
@@ -101,10 +101,10 @@ export default function Skills() {
                       transition={{ duration: 0.4, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
                     >
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-white font-medium">{skill.name}</span>
-                        <span className="text-gray-400 text-sm">{skill.level}%</span>
+                        <span className="text-gray-900 dark:text-white font-medium">{skill.name}</span>
+                        <span className="text-gray-600 dark:text-gray-400 text-sm">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${skill.level}%` } : {}}
@@ -134,7 +134,7 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-center text-gray-300">Additional Skills</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-300">Additional Skills</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
               'ServiceNow', 'Figma', 'Websso', 'Agile', 'Jira Automation',
@@ -147,9 +147,9 @@ export default function Skills() {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.3, delay: 0.8 + index * 0.05 }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="px-4 py-2 bg-gray-900 rounded-lg border border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
               >
-                <span className="text-gray-300 text-sm">{skill}</span>
+                <span className="text-gray-800 dark:text-gray-300 text-sm">{skill}</span>
               </motion.div>
             ))}
           </div>
