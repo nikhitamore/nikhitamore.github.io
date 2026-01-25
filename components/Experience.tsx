@@ -54,7 +54,7 @@ export default function Experience() {
   return (
     <section id="experience" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-blue-900/10 dark:via-blue-900/10 via-blue-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -65,16 +65,16 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-700 bg-clip-text text-transparent">
               Experience
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto" />
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-purple-500 transform md:-translate-x-1/2" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-700 via-cyan-600 to-blue-700 transform md:-translate-x-1/2" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {
@@ -90,7 +90,7 @@ export default function Experience() {
                   }`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-black transform md:-translate-x-1/2 z-10" />
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-blue-700 rounded-full border-4 border-black transform md:-translate-x-1/2 z-10" />
 
                   {/* Content card */}
                   <div
@@ -103,15 +103,15 @@ export default function Experience() {
                       className="relative group"
                     >
                       {/* Glow effect */}
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
+                      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
                       
-                      <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+                      <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-blue-700/50 transition-all duration-300">
                         <div className="flex items-start justify-between mb-4">
                           <div>
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.title}</h3>
                             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-2">
                               <span className="flex items-center gap-1">
-                                <FiBriefcase className="text-purple-400" />
+                                <FiBriefcase className="text-blue-600" />
                                 {exp.company}
                               </span>
                             </div>
@@ -131,7 +131,7 @@ export default function Experience() {
                         <ul className="space-y-2 mb-4">
                           {exp.description.map((item, i) => (
                             <li key={i} className="text-gray-700 dark:text-gray-400 text-sm flex items-start gap-2">
-                              <span className="text-purple-400 mt-1">▹</span>
+                              <span className="text-blue-600 mt-1">▹</span>
                               {item}
                             </li>
                           ))}
@@ -141,7 +141,7 @@ export default function Experience() {
                           {exp.technologies.map((tech, i) => (
                             <span
                               key={i}
-                              className="px-3 py-1 text-xs bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20"
+                              className="px-3 py-1 text-xs bg-blue-700/10 text-blue-600 rounded-full border border-blue-700/20"
                             >
                               {tech}
                             </span>

@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-blue-900/10 dark:via-blue-900/10 via-blue-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -24,11 +24,11 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-700 bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -41,10 +41,10 @@ export default function About() {
           >
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition duration-300" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition duration-300" />
               
               {/* Photo container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/30 group-hover:border-purple-500/50 transition-all duration-300">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-700/30 group-hover:border-blue-700/50 transition-all duration-300">
                 <motion.img
                   src="/dev_profile.jpg"
                   alt="Nikhita More"
@@ -55,7 +55,7 @@ export default function About() {
               </div>
               
               {/* Decorative ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-purple-500/20 animate-pulse" />
+              <div className="absolute inset-0 rounded-full border-2 border-blue-700/20 animate-pulse" />
             </div>
           </motion.div>
 
@@ -67,10 +67,10 @@ export default function About() {
             className="relative group"
           >
             {/* Glow effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
             
-            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-8 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-8 border border-gray-300 dark:border-gray-800 hover:border-blue-700/50 transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-700 bg-clip-text text-transparent">
                 Senior Software Engineer
               </h3>
               <p className="text-gray-700 dark:text-gray-400 mb-4 leading-relaxed">
@@ -87,14 +87,14 @@ export default function About() {
                 download="Nikhita_More.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/75 transition-shadow relative overflow-hidden group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-lg font-semibold text-white shadow-lg shadow-blue-700/50 hover:shadow-blue-700/75 transition-shadow relative overflow-hidden group"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <FiDownload />
                   Download CV
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"
                   initial={false}
                 />
               </motion.a>
@@ -122,13 +122,13 @@ export default function About() {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="relative group bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all cursor-default"
+                className="relative group bg-gray-100 dark:bg-gray-900 rounded-xl p-6 border border-gray-300 dark:border-gray-800 hover:border-blue-700/50 transition-all cursor-default"
               >
                 {/* Glow effect on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-10 blur transition duration-300" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-xl opacity-0 group-hover:opacity-10 blur transition duration-300" />
                 <div className="relative">
                   <div className="text-3xl mb-3">{item.icon}</div>
-                  <h4 className="text-lg font-semibold mb-2 text-purple-400">{item.title}</h4>
+                  <h4 className="text-lg font-semibold mb-2 text-blue-600">{item.title}</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
                 </div>
               </motion.div>

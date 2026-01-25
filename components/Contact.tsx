@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-blue-900/10 dark:via-blue-900/10 via-blue-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -52,11 +52,11 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-700 bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-4" />
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
@@ -82,12 +82,12 @@ export default function Contact() {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 group"
               >
-                <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20 group-hover:border-purple-500/50 transition-colors">
-                  <FiMail className="text-purple-400" size={24} />
+                <div className="p-3 bg-blue-700/10 rounded-lg border border-blue-700/20 group-hover:border-blue-700/50 transition-colors">
+                  <FiMail className="text-blue-600" size={24} />
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Email</p>
-                  <a href="mailto:nikhitamore1@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                  <a href="mailto:nikhitamore1@gmail.com" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-600 transition-colors">
                     nikhitamore1@gmail.com
                   </a>
                 </div>
@@ -97,8 +97,8 @@ export default function Contact() {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 group"
               >
-                <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20 group-hover:border-purple-500/50 transition-colors">
-                  <FiMapPin className="text-purple-400" size={24} />
+                <div className="p-3 bg-blue-700/10 rounded-lg border border-blue-700/20 group-hover:border-blue-700/50 transition-colors">
+                  <FiMapPin className="text-blue-600" size={24} />
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Location</p>
@@ -119,9 +119,9 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-gray-100 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all"
+                    className="p-3 bg-gray-100 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-800 hover:border-blue-700/50 transition-all"
                   >
-                    <social.icon className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors" size={24} />
+                    <social.icon className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-600 transition-colors" size={24} />
                   </motion.a>
                 ))}
               </div>
@@ -136,9 +136,9 @@ export default function Contact() {
             className="relative group"
           >
             {/* Glow effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
             
-            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-8 border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+            <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl p-8 border border-gray-300 dark:border-gray-800 hover:border-blue-700/50 transition-all duration-300">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -151,7 +151,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-gray-900 dark:text-white transition-all"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 text-gray-900 dark:text-white transition-all"
                     placeholder="Your Name"
                   />
                 </div>
@@ -167,7 +167,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-gray-900 dark:text-white transition-all"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 text-gray-900 dark:text-white transition-all"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/75 transition-shadow flex items-center justify-center gap-2"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-lg font-semibold text-white shadow-lg shadow-blue-700/50 hover:shadow-blue-700/75 transition-shadow flex items-center justify-center gap-2"
                 >
                   <FiSend />
                   Send Message
