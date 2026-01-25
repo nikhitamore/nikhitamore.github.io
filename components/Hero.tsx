@@ -101,7 +101,7 @@ export default function Hero() {
           className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-300"
         >
           I'm a{' '}
-          <span className="relative inline-block min-w-[200px] md:min-w-[300px] lg:min-w-[400px] h-[1.2em]">
+          <span className="relative inline-block min-w-[200px] md:min-w-[300px] lg:min-w-[400px] h-[1.2em]" style={{ paddingTop: '20px' }}>
             {words.map((word, index) => (
               <motion.span
                 key={word}
@@ -123,9 +123,9 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12"
         >
-          Senior Software Engineer & Full Stack Developer based in Pune, India.
+          Senior Software Engineer & Full Stack Developer.
           <br />
-          Building scalable applications and innovative solutions with modern technologies.
+          Crafting scalable applications and innovative solutions with cutting-edge technologies.
         </motion.p>
 
         <motion.div
