@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
-import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import { FiMail, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -90,19 +90,6 @@ export default function Contact() {
                   <a href="mailto:nikhitamore1@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                     nikhitamore1@gmail.com
                   </a>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-4 group"
-              >
-                <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20 group-hover:border-purple-500/50 transition-colors">
-                  <FiMapPin className="text-purple-400" size={24} />
-                </div>
-                <div>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">Location</p>
-                  <p className="text-gray-900 dark:text-white">Pune, India</p>
                 </div>
               </motion.div>
             </div>
