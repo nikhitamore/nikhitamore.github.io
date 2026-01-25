@@ -3,6 +3,8 @@ import { Col, Row } from 'react-bootstrap';
 import Profile from '../../media/Profile.jpg';
 import PythonLogo from '../../media/python.jpg';
 import ReactLogo from '../../media/react.png';
+import uiLogo from '../../media/ui_logos.jpeg';
+
 import './AboutMe.css';
 import pdf from "../../media/Nikhita_More.pdf";
 class AboutMe extends React.Component {
@@ -39,7 +41,7 @@ class AboutMe extends React.Component {
                     </Col>
                     <Col id="aboutme" lg={8} style={{ color: "#000", padding: "3%" }}>
                         <Row>
-                            <Col id="aboutme" lg={6} style={{ color: "#000", padding: "3%" }}><img src={ReactLogo} alt="React JS" style={{ width: 250, height: 150, margin: "10%", borderRadius: "18px" }} /></Col>
+                            <Col id="aboutme" lg={6} style={{ color: "#000", padding: "3%" }}><img src={uiLogo} alt="React JS" style={{ width: 250, height: 150, margin: "10%", borderRadius: "18px" }} /></Col>
                             <Col id="aboutme" lg={6} style={{ color: "#000", padding: "3%" }}><img src={PythonLogo} alt="Python" style={{ width: 250, height: 150, margin: "10%", borderRadius: "18px" }} /></Col>
 
                         </Row>
