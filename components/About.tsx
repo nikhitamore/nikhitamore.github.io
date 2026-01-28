@@ -75,7 +75,7 @@ export default function About() {
               </h3>
               <p className="text-gray-700 dark:text-gray-400 mb-4 leading-relaxed">
                 Senior Software Engineer with 5+ years of experience building scalable web applications and innovative solutions. 
-                Currently working at Red Hat India, where I've engineered platforms enabling 15,000+ deployments and built AI-powered 
+                Currently working at Red Hat India, where I've engineered platforms enabling 30,000+ deployments and built AI-powered 
                 documentation systems. Passionate about full-stack development, performance optimization, and creating impactful solutions.
               </p>
               <p className="text-gray-700 dark:text-gray-400 mb-6 leading-relaxed">

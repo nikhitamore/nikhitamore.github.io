@@ -68,7 +68,7 @@ const professionalWork: Project[] = [
   },
   {
     title: 'SPAship Web Manager',
-    description: 'Built the SPAship Web Manager platform to manage SPA deployments, supporting both static and containerized applications. Implemented key features: deployment creation/configuration, log viewing, symlink and virtual path management, uptime monitoring, access management and visual dashboards. Enabled over 15,000 deployments with 70% load time reduction.',
+    description: 'Built the SPAship Web Manager platform to manage SPA deployments, supporting both static and containerized applications. Implemented key features: deployment creation/configuration, log viewing, symlink and virtual path management, uptime monitoring, access management and visual dashboards. Enabled over 30,000 deployments with 70% load time reduction.',
     technologies: ['Next.js', 'TypeScript', 'MongoDB', 'HTML5', 'CSS3', 'Websso', 'OpenShift', 'Docker'],
     icon: FiPackage,
   },
@@ -110,125 +110,19 @@ export default function Projects() {
       <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-purple-900/10 dark:via-purple-900/10 via-purple-100/10 to-white dark:to-black" />
       
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Professional Work — Featured Projects hidden */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A collection of personal projects I've worked on, showcasing my skills and experience
-          </p>
-        </motion.div>
-
-        {/* Personal Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {personalProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative"
-            >
-              {/* Glow effect on hover */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300" />
-              
-              <div className="relative bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-300 dark:border-gray-800 hover:border-purple-500/50 transition-all duration-300 h-full flex flex-col">
-                {/* Project image */}
-                <div className="relative h-48 bg-gradient-to-br from-purple-100/50 dark:from-purple-900/50 to-pink-100/50 dark:to-pink-900/50 overflow-hidden">
-                  {project.image ? (
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl opacity-20">🚀</div>
-                    </div>
-                  )}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-                    initial={false}
-                  />
-                </div>
-
-                <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-400 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-400 text-sm mb-4 line-clamp-4">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 text-xs bg-purple-500/10 text-purple-400 rounded border border-purple-500/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
-                    {project.githubUrl && (
-                      <motion.a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-white transition-colors"
-                      >
-                        <FiGithub size={20} />
-                        <span className="text-sm">Code</span>
-                      </motion.a>
-                    )}
-                    {project.liveUrl && (
-                      <motion.a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-white transition-colors"
-                      >
-                        <FiExternalLink size={20} />
-                        <span className="text-sm">Live</span>
-                      </motion.a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Professional Work Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                 Professional Work
               </span>
-            </h3>
+            </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Key projects and platforms I've built during my professional career
@@ -241,7 +135,7 @@ export default function Projects() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: (personalProjects.length + index) * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
                 {/* Glow effect on hover */}

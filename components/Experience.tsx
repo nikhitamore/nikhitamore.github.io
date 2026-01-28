@@ -20,7 +20,7 @@ const experiences: ExperienceItem[] = [
     location: 'Pune, India',
     period: 'Jan 2023 - Present',
     description: [
-      'Engineered the entire SPAship Web Manager platform, enabling over 15,000 deployments of static and SSR applications. Optimized performance, reduced load times by ~70%, and improved accessibility across internal teams',
+      'Engineered the entire SPAship Web Manager platform, enabling over 30,000 deployments of static and SSR applications. Optimized performance, reduced load times by ~70%, and improved accessibility across internal teams',
       'Built DocsBot, an AI-powered internal documentation system, managing full project lifecycle from proof of concept to production deployment using GenAI, Python, and Qdrant-DB',
       'Implemented Backstage plugins for DocsBot, AI Registry, and Audit & Compliance Hub, including MCP server functionalities and data integration actions (LDAP, GitLab, GitHub)',
       'Led development of the XE Compass homepage and dashboards, improving navigation, accessibility, and performance for internal users',
