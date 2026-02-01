@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
+import { FiMenu, FiX, FiSun, FiMoon, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { useTheme } from './ThemeProvider'
 
 export default function Navigation() {
@@ -106,7 +106,41 @@ export default function Navigation() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
-            
+            {/* Social links - top right */}
+            <div className="flex items-center gap-1 ml-2 border-l border-gray-300 dark:border-gray-700 pl-4">
+              <motion.a
+                href="https://github.com/nikhitamore"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className={`p-2 rounded-lg transition-colors ${
+                  theme === 'dark'
+                    ? 'text-gray-400 hover:text-white hover:bg-gray-800'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+                aria-label="GitHub"
+              >
+                <FiGithub size={20} />
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/nikhita-more-3aa138126/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className={`p-2 rounded-lg transition-colors ${
+                  theme === 'dark'
+                    ? 'text-gray-400 hover:text-white hover:bg-gray-800'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin size={20} />
+              </motion.a>
+            </div>
             {/* Theme Toggle Button */}
             <motion.button
               onClick={toggleTheme}
@@ -124,7 +158,9 @@ export default function Navigation() {
           </div>
 
           {/* Mobile buttons */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-1">
+            <a href="https://github.com/nikhitamore" target="_blank" rel="noopener noreferrer" title="GitHub" className={`p-2 rounded-lg ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`} aria-label="GitHub"><FiGithub size={20} /></a>
+            <a href="https://www.linkedin.com/in/nikhita-more-3aa138126/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className={`p-2 rounded-lg ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`} aria-label="LinkedIn"><FiLinkedin size={20} /></a>
             {/* Theme Toggle Button */}
             <motion.button
               onClick={toggleTheme}
